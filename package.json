@@ -1,7 +1,7 @@
 {
   "name": "my-project",
   "version": "1.0.0",
-  "description": "demo",
+  "description": "A Vue.js project",
   "author": "gdmec07150942 <554061700@qq.com>",
   "private": true,
   "scripts": {
