@@ -26,6 +26,7 @@
     <h1 v-if="type === 'A'">A</h1>
     <h1 v-else-if="type === 'B'">B</h1>
     <h1 v-else-if="type === 'C'">C</h1>
+    <p>{{site}}</p>
   </div>
 </template>
 
@@ -44,7 +45,20 @@
         ok: false,
         url: 'https://github.com/gdmec07150942/VueDemo',
         msg: '嘻嘻',
-        type: 'A'
+        type: 'A',
+        name: 'Geogle',
+      }
+    },
+    computed: {
+      site: {
+        get: function () {
+          return this.name + '' + this.url
+        },
+        set: function (newValue) {
+          var names = newValue.split('')
+          this.name = names[0]
+          this.url = names[names.length - 1]
+        }
       }
     },
     methods: {

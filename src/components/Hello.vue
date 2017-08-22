@@ -1,7 +1,16 @@
 <template>
   <div class="hello">
+    <template v-for="(value, key, index) in object">
+      <ul>
+        <li>{{index}}.{{ key }} : {{ value }}</li>
+      </ul>
+    </template>
+    <div>
+      <ul>
+        <li v-for="i in 10">{{i}}</li>
+      </ul>
+    </div>
 
-      <h1>{{msg}}</h1>
 
   </div>
 </template>
@@ -11,7 +20,11 @@
     name: 'hello',
     data () {
       return {
-        msg: '欢迎来到vue'
+        object: {
+          name: '您好,以下是我Vue练习的github的地址',
+          url: 'https://github.com/gdmec07150942/VueDemo',
+          slogan: '学的不仅是技术，更是梦想！'
+        }
       }
     }
   }
