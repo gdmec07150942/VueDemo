@@ -31,6 +31,9 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import VueRouter from 'vue-router'
+  Vue.use(VueRouter)
   import Hello from './components/Hello.vue'
   export default {
     name: 'app',
@@ -46,7 +49,7 @@
         url: 'https://github.com/gdmec07150942/VueDemo',
         msg: '嘻嘻',
         type: 'A',
-        name: 'Geogle',
+        name: 'Geogle'
       }
     },
     computed: {
